@@ -12,8 +12,8 @@ export default class Albums extends React.Component {
 				<h3>Albums</h3>
 			  <div className="row">
 			  	{this.props.albums.map((album) => 
-				    <div key={album.name} className="col-xs-4">
-				      <a className="thumbnail" href="#">
+				    <div key={album.id} className="col-xs-4">
+				      <a onClick={()=> this.props.handleClick(album)} className="thumbnail" href="#">
 				        <img src={album.imageUrl} />
 				        <div className="caption">
 				          <h5>
